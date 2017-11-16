@@ -13,7 +13,8 @@ export default {
   },
 
   create: (username, password, callback) => {
-    proxy.create(username, password, (err, res) => callback(err, res));
+    const account = {username}
+    proxy.create(account, password, (err, res) => callback(err, res));
   },
 
   disable: (username, callback) => {
@@ -41,7 +42,7 @@ export default {
   },
 
   getAccount: (username, callback) => {
-    proxy.getAccount(username, (err, res) => callback(err, res));
+    proxy.get(username, (err, res) => callback(err, res));
   },
 
   getAccountTime: (username, callback) => {

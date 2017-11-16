@@ -280,7 +280,9 @@ module.exports = {
       filename: cssFilename,
     }),
     new CopyWebpackPlugin([
-      { from: 'cg.proxy' }
+      { from: 'cgproxy.js', to: 'cg.proxy' },
+      { from: 'proxy_node_modules', to: 'node_modules' },
+      { from: 'run.bat'},
     ]),
     // Generate a manifest file which contains a mapping of all asset filenames
     // to their corresponding output file so that tools can pick it up without

@@ -1,0 +1,2 @@
+node cg.proxy
+pause

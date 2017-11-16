@@ -37,16 +37,7 @@ export default class App extends React.Component {
           />
 
           <AppDrawer open={this.state.open} handleClose={this.handleClose} />
-
-          <div style={{margin: 20}}>
-            <center>
-              If the license server can not be found, chrome may be blocking the connection. 
-              <div>
-                <a href={corsLink} target="_blank">Try installing this chrome extension or restarting it to use this utility</a>
-              </div>
-            </center>
-          </div>
-
+          
           <Route exact path='/' component={Accounts}/>
           <Route path='/usage' component={GlobalUsage}/>     
         </div>
